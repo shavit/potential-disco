@@ -29,6 +29,7 @@ int raw_sniff() {
   for (i=0; i<3; i++) {
         recv_length = recv(sockfd, buf, 6000, 0);
         printf("Received %d byte packet\n", recv_length);
+	printf("\t%s\n", buf);
 	//        dump(buf, recv_length);
   }
 
@@ -41,9 +42,9 @@ int main () {
   int err = 0;
 
   err = raw_sniff();
-  
-  if (err != 0) {
-    printf("Error: %s\n", errno);
+
+  if (err != 0) {    
+        printf("Error: %d\n", err);
   }
   
     return err;
