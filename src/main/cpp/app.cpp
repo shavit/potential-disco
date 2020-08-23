@@ -26,7 +26,7 @@ int raw_sniff() {
     return -1;
   }
 
-  for (i=0; i<3; i++) {
+  for (i=0; i<20; i++) {
         recv_length = recv(sockfd, buf, 6000, 0);
         printf("Received %d byte packet\n", recv_length);
 	printf("\t%s\n", buf);
