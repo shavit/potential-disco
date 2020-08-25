@@ -37,8 +37,6 @@ int raw_sniff() {
 }
 
 int main () {
-    // sniffer::Greeter greeter;    
-    // std::cout << greeter.greeting() << std::endl;
   int err = 0;
 
   err = raw_sniff();
